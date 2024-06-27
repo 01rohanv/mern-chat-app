@@ -3,10 +3,10 @@ import dotenv from "dotenv";
 import authRoutes from "../backend/routes/auth.routes.js";
 import messageRoutes from "../backend/routes/message.routes.js";
 import userRoutes from "../backend/routes/user.routes.js";
-import connectToMongoDB from "./db/connectToMongoDb.js";
 import cookieParser from "cookie-parser";
 import { app, server } from "./socket/socket.js";
 import path from "path";
+import connectToMongoDB from "./db/connectToMongoDb.js";
 
 const PORT = process.env.PORT || 5000;
 
