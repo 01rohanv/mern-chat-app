@@ -6,7 +6,7 @@ import userRoutes from "../backend/routes/user.routes.js";
 import cookieParser from "cookie-parser";
 import { app, server } from "./socket/socket.js";
 import path from "path";
-import connectToMongoDB from "./db/connectToMongoDb.js";
+import connectToMongoDb from "./db/connectToMongoDb.js";
 
 const PORT = process.env.PORT || 5000;
 
@@ -32,6 +32,6 @@ app.get("*", (req, res) => {
 // });
 
 server.listen(PORT, () => {
-  connectToMongoDB();
+  connectToMongoDb();
   console.log(`Server is running on Port ${PORT}`);
 });
